@@ -18,6 +18,12 @@ export default defineConfig({
 				}
 			],
 			sidebar: [
+     {
+					label: 'Debug',
+					items: [
+						{ label: 'Tipography', slug: 'debug/tipography' },
+					],
+				},
 				{
 					label: 'Guides',
 					items: [
