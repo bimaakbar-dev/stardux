@@ -1,128 +1,70 @@
-/* stardux.css — Palet warna hardcode + mapping ke Starlight */
-
-/* ================================================================
-   1. DEFINISI PALET WARNA (dari global.css, di-hardcode)
-   ================================================================ */
-
-:root,
-[data-theme='dark'] {
-  --bg: #0a0a0a;
-  --bg-subtle: #101010;
-  --bg-muted: #181818;
-  --bg-elevated: #1f1f1f;
-  --bg-overlay: rgba(10, 10, 10, 0.92);
-
-  --fg: #ededed;
-  --fg-strong: #ffffff;
-  --fg-muted: #a0a0a0;
-  --fg-subtle: #7d7d7d;
-  --fg-dim: #4d4d4d;
-  --fg-disabled: #333333;
-  --fg-inverted: #0a0a0a;
-
-  --border: #262626;
-  --border-strong: #3a3a3a;
-  --border-subtle: #161616;
-
-  --accent: #e8b93a;
-  --accent-dim: rgba(232, 185, 58, 0.34);
-  --accent-soft: rgba(232, 185, 58, 0.12);
-  --accent-ring: rgba(232, 185, 58, 0.30);
-  --accent-border: rgba(232, 185, 58, 0.44);
-  --accent-fg: #241900;
-
-  --secondary: #e4e2dc;
-  --secondary-subtle: rgba(228, 226, 220, 0.08);
-  --secondary-muted: rgba(228, 226, 220, 0.16);
-  --secondary-tertiary: rgba(228, 226, 220, 0.26);
-  --secondary-border: rgba(228, 226, 220, 0.38);
-  --secondary-fg: #1a1815;
-
-  --success: #34e0a1;
-  --success-soft: rgba(52, 224, 161, 0.14);
-  --success-fg: #052e1c;
-
-  --error: #ff7b86;
-  --error-soft: rgba(255, 123, 134, 0.14);
-  --error-fg: #2b0509;
-
-  --warning: #ffab5c;
-  --warning-soft: rgba(255, 171, 92, 0.14);
-  --warning-fg: #2b1500;
-
-  --info: #2adcf5;
-  --info-soft: rgba(42, 220, 245, 0.14);
-  --info-fg: #04252b;
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.80);
-  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.60), 0 0 20px rgba(232, 185, 58, 0.05);
-  --shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.68), 0 0 32px rgba(232, 185, 58, 0.07);
-  --shadow-xl: 0 22px 40px rgba(0, 0, 0, 0.76), 0 0 44px rgba(232, 185, 58, 0.09);
-}
-
-[data-theme='light'] {
-  --bg: #ffffff;
-  --bg-subtle: #fafafa;
-  --bg-muted: #f0f0f0;
-  --bg-elevated: #ffffff;
-  --bg-overlay: rgba(255, 255, 255, 0.94);
-
-  --fg: #111111;
-  --fg-strong: #000000;
-  --fg-muted: #525252;
-  --fg-subtle: #6b6b6b;
-  --fg-dim: #9e9e9e;
-  --fg-disabled: #c7c7c7;
-  --fg-inverted: #ffffff;
-
-  --border: #e5e5e5;
-  --border-strong: #d0d0d0;
-  --border-subtle: #efefef;
-
-  --accent: #6b7075;
-  --accent-dim: rgba(107, 112, 117, 0.22);
-  --accent-soft: rgba(107, 112, 117, 0.09);
-  --accent-ring: rgba(107, 112, 117, 0.28);
-  --accent-border: rgba(107, 112, 117, 0.40);
-  --accent-fg: #ffffff;
-
-  --secondary: #8a6a00;
-  --secondary-subtle: rgba(138, 106, 0, 0.06);
-  --secondary-muted: rgba(138, 106, 0, 0.12);
-  --secondary-tertiary: rgba(138, 106, 0, 0.20);
-  --secondary-border: rgba(138, 106, 0, 0.32);
-  --secondary-fg: #ffffff;
-
-  --success: #0f7a4b;
-  --success-soft: rgba(15, 122, 75, 0.11);
-  --success-fg: #ffffff;
-
-  --error: #c22a35;
-  --error-soft: rgba(194, 42, 53, 0.11);
-  --error-fg: #ffffff;
-
-  --warning: #b8440a;
-  --warning-soft: rgba(184, 68, 10, 0.11);
-  --warning-fg: #ffffff;
-
-  --info: #0c6e91;
-  --info-soft: rgba(12, 110, 145, 0.11);
-  --info-fg: #ffffff;
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 22px 32px rgba(0, 0, 0, 0.11), 0 6px 10px rgba(0, 0, 0, 0.06);
-}
-
-/* ================================================================
-   2. OVERRIDE STARLIGHT — pakai variabel palet di atas
-   ================================================================ */
+/* stardux.css — hanya warna & bayangan, ukuran/layout tetap bawaan Starlight */
 
 @layer starlight.base {
+  /* ======== PALET GLOBAL (dark) ======== */
   :root,
   [data-theme='dark'] {
-    /* Skala abu-abu */
+    --bg: #0a0a0a;
+    --bg-subtle: #101010;
+    --bg-muted: #181818;
+    --bg-overlay: rgba(10, 10, 10, 0.92);
+    --fg: #ededed;
+    --fg-strong: #ffffff;
+    --fg-muted: #a0a0a0;
+    --fg-subtle: #7d7d7d;
+    --fg-dim: #4d4d4d;
+    --fg-inverted: #0a0a0a;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --border-subtle: #161616;
+    --accent: #e8b93a;
+    --accent-soft: rgba(232, 185, 58, 0.12);
+    --success: #34e0a1;
+    --success-soft: rgba(52, 224, 161, 0.14);
+    --error: #ff7b86;
+    --error-soft: rgba(255, 123, 134, 0.14);
+    --warning: #ffab5c;
+    --warning-soft: rgba(255, 171, 92, 0.14);
+    --info: #2adcf5;
+    --info-soft: rgba(42, 220, 245, 0.14);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.80);
+    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.60), 0 0 20px rgba(232, 185, 58, 0.05);
+    --shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.68), 0 0 32px rgba(232, 185, 58, 0.07);
+  }
+
+  /* ======== PALET GLOBAL (light) ======== */
+  [data-theme='light'] {
+    --bg: #ffffff;
+    --bg-subtle: #fafafa;
+    --bg-muted: #f0f0f0;
+    --bg-overlay: rgba(255, 255, 255, 0.94);
+    --fg: #111111;
+    --fg-strong: #000000;
+    --fg-muted: #525252;
+    --fg-subtle: #6b6b6b;
+    --fg-dim: #9e9e9e;
+    --fg-inverted: #ffffff;
+    --border: #e5e5e5;
+    --border-strong: #d0d0d0;
+    --border-subtle: #efefef;
+    --accent: #6b7075;
+    --accent-soft: rgba(107, 112, 117, 0.09);
+    --success: #0f7a4b;
+    --success-soft: rgba(15, 122, 75, 0.11);
+    --error: #c22a35;
+    --error-soft: rgba(194, 42, 53, 0.11);
+    --warning: #b8440a;
+    --warning-soft: rgba(184, 68, 10, 0.11);
+    --info: #0c6e91;
+    --info-soft: rgba(12, 110, 145, 0.11);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  /* ======== MAPPING KE STARLIGHT (hanya warna & shadow) ======== */
+  :root,
+  [data-theme='dark'] {
     --sl-color-white: var(--fg-strong);
     --sl-color-gray-1: var(--fg);
     --sl-color-gray-2: var(--fg-muted);
@@ -132,7 +74,6 @@
     --sl-color-gray-6: var(--border);
     --sl-color-black: var(--bg);
 
-    /* Warna tematik */
     --sl-color-orange: var(--warning);
     --sl-color-orange-low: var(--warning-soft);
     --sl-color-orange-high: var(--warning);
@@ -149,17 +90,14 @@
     --sl-color-red-low: var(--error-soft);
     --sl-color-red-high: var(--error);
 
-    /* Ungu — tidak ada di palet, pakai nilai tetap */
     --sl-color-purple: oklch(0.62 0.15 300);
     --sl-color-purple-low: oklch(0.62 0.15 300 / 0.15);
     --sl-color-purple-high: oklch(0.62 0.15 300);
 
-    /* Aksen */
     --sl-color-accent: var(--accent);
     --sl-color-accent-low: var(--accent-soft);
     --sl-color-accent-high: var(--accent);
 
-    /* Teks & latar */
     --sl-color-text: var(--fg);
     --sl-color-text-accent: var(--accent);
     --sl-color-text-invert: var(--fg-inverted);
@@ -176,13 +114,11 @@
 
     --sl-color-backdrop-overlay: var(--bg-overlay);
 
-    /* Bayangan */
     --sl-shadow-sm: var(--shadow-sm);
     --sl-shadow-md: var(--shadow-md);
     --sl-shadow-lg: var(--shadow-lg);
   }
 
-  /* LIGHT MODE — mapping ulang dengan nilai light */
   [data-theme='light'] {
     --sl-color-white: var(--fg-strong);
     --sl-color-gray-1: var(--fg);
