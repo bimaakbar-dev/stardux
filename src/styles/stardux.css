@@ -1,176 +1,170 @@
-/* stardux.css — hanya warna & bayangan, ukuran/layout tetap bawaan Starlight */
+/* stardux.css – override warna & shadow Starlight, biarkan ukuran & layout default */
 
+/* === Palet warna global (hardcode dari global.css) === */
+:root,
+[data-theme='dark'] {
+  --bg: #0a0a0a;
+  --bg-subtle: #101010;
+  --bg-muted: #181818;
+  --bg-overlay: rgba(10, 10, 10, 0.92);
+  --fg: #ededed;
+  --fg-strong: #ffffff;
+  --fg-muted: #a0a0a0;
+  --fg-subtle: #7d7d7d;
+  --fg-dim: #4d4d4d;
+  --fg-inverted: #0a0a0a;
+  --border: #262626;
+  --border-strong: #3a3a3a;
+  --border-subtle: #161616;
+  --accent: #e8b93a;
+  --accent-soft: rgba(232, 185, 58, 0.12);
+  --success: #34e0a1;
+  --success-soft: rgba(52, 224, 161, 0.14);
+  --error: #ff7b86;
+  --error-soft: rgba(255, 123, 134, 0.14);
+  --warning: #ffab5c;
+  --warning-soft: rgba(255, 171, 92, 0.14);
+  --info: #2adcf5;
+  --info-soft: rgba(42, 220, 245, 0.14);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.80);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.60), 0 0 20px rgba(232, 185, 58, 0.05);
+  --shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.68), 0 0 32px rgba(232, 185, 58, 0.07);
+}
+
+[data-theme='light'] {
+  --bg: #ffffff;
+  --bg-subtle: #fafafa;
+  --bg-muted: #f0f0f0;
+  --bg-overlay: rgba(255, 255, 255, 0.94);
+  --fg: #111111;
+  --fg-strong: #000000;
+  --fg-muted: #525252;
+  --fg-subtle: #6b6b6b;
+  --fg-dim: #9e9e9e;
+  --fg-inverted: #ffffff;
+  --border: #e5e5e5;
+  --border-strong: #d0d0d0;
+  --border-subtle: #efefef;
+  --accent: #6b7075;
+  --accent-soft: rgba(107, 112, 117, 0.09);
+  --success: #0f7a4b;
+  --success-soft: rgba(15, 122, 75, 0.11);
+  --error: #c22a35;
+  --error-soft: rgba(194, 42, 53, 0.11);
+  --warning: #b8440a;
+  --warning-soft: rgba(184, 68, 10, 0.11);
+  --info: #0c6e91;
+  --info-soft: rgba(12, 110, 145, 0.11);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* === Override Starlight: hanya warna & shadow, sisanya default === */
 @layer starlight.base {
-  /* ======== PALET GLOBAL (dark) ======== */
   :root,
-  [data-theme='dark'] {
-    --bg: #0a0a0a;
-    --bg-subtle: #101010;
-    --bg-muted: #181818;
-    --bg-overlay: rgba(10, 10, 10, 0.92);
-    --fg: #ededed;
-    --fg-strong: #ffffff;
-    --fg-muted: #a0a0a0;
-    --fg-subtle: #7d7d7d;
-    --fg-dim: #4d4d4d;
-    --fg-inverted: #0a0a0a;
-    --border: #262626;
-    --border-strong: #3a3a3a;
-    --border-subtle: #161616;
-    --accent: #e8b93a;
-    --accent-soft: rgba(232, 185, 58, 0.12);
-    --success: #34e0a1;
-    --success-soft: rgba(52, 224, 161, 0.14);
-    --error: #ff7b86;
-    --error-soft: rgba(255, 123, 134, 0.14);
-    --warning: #ffab5c;
-    --warning-soft: rgba(255, 171, 92, 0.14);
-    --info: #2adcf5;
-    --info-soft: rgba(42, 220, 245, 0.14);
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.80);
-    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.60), 0 0 20px rgba(232, 185, 58, 0.05);
-    --shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.68), 0 0 32px rgba(232, 185, 58, 0.07);
+  ::backdrop {
+    /* Warna & shadow override dengan !important agar pasti menang */
+    --sl-color-white: var(--fg-strong) !important;
+    --sl-color-gray-1: var(--fg) !important;
+    --sl-color-gray-2: var(--fg-muted) !important;
+    --sl-color-gray-3: var(--fg-subtle) !important;
+    --sl-color-gray-4: var(--fg-dim) !important;
+    --sl-color-gray-5: var(--border-strong) !important;
+    --sl-color-gray-6: var(--border) !important;
+    --sl-color-black: var(--bg) !important;
+
+    --sl-color-orange: var(--warning) !important;
+    --sl-color-orange-low: var(--warning-soft) !important;
+    --sl-color-orange-high: var(--warning) !important;
+    --sl-color-green: var(--success) !important;
+    --sl-color-green-low: var(--success-soft) !important;
+    --sl-color-green-high: var(--success) !important;
+    --sl-color-blue: var(--info) !important;
+    --sl-color-blue-low: var(--info-soft) !important;
+    --sl-color-blue-high: var(--info) !important;
+    --sl-color-red: var(--error) !important;
+    --sl-color-red-low: var(--error-soft) !important;
+    --sl-color-red-high: var(--error) !important;
+    --sl-color-purple: oklch(0.62 0.15 300) !important;
+    --sl-color-purple-low: oklch(0.62 0.15 300 / 0.15) !important;
+    --sl-color-purple-high: oklch(0.62 0.15 300) !important;
+
+    --sl-color-accent: var(--accent) !important;
+    --sl-color-accent-low: var(--accent-soft) !important;
+    --sl-color-accent-high: var(--accent) !important;
+
+    --sl-color-text: var(--fg) !important;
+    --sl-color-text-accent: var(--accent) !important;
+    --sl-color-text-invert: var(--fg-inverted) !important;
+
+    --sl-color-bg: var(--bg) !important;
+    --sl-color-bg-nav: var(--bg-subtle) !important;
+    --sl-color-bg-sidebar: var(--bg-subtle) !important;
+    --sl-color-bg-inline-code: var(--bg-muted) !important;
+    --sl-color-bg-accent: var(--accent-soft) !important;
+
+    --sl-color-hairline-light: var(--border-subtle) !important;
+    --sl-color-hairline: var(--border) !important;
+    --sl-color-hairline-shade: var(--border-strong) !important;
+
+    --sl-color-backdrop-overlay: var(--bg-overlay) !important;
+
+    --sl-shadow-sm: var(--shadow-sm) !important;
+    --sl-shadow-md: var(--shadow-md) !important;
+    --sl-shadow-lg: var(--shadow-lg) !important;
   }
 
-  /* ======== PALET GLOBAL (light) ======== */
-  [data-theme='light'] {
-    --bg: #ffffff;
-    --bg-subtle: #fafafa;
-    --bg-muted: #f0f0f0;
-    --bg-overlay: rgba(255, 255, 255, 0.94);
-    --fg: #111111;
-    --fg-strong: #000000;
-    --fg-muted: #525252;
-    --fg-subtle: #6b6b6b;
-    --fg-dim: #9e9e9e;
-    --fg-inverted: #ffffff;
-    --border: #e5e5e5;
-    --border-strong: #d0d0d0;
-    --border-subtle: #efefef;
-    --accent: #6b7075;
-    --accent-soft: rgba(107, 112, 117, 0.09);
-    --success: #0f7a4b;
-    --success-soft: rgba(15, 122, 75, 0.11);
-    --error: #c22a35;
-    --error-soft: rgba(194, 42, 53, 0.11);
-    --warning: #b8440a;
-    --warning-soft: rgba(184, 68, 10, 0.11);
-    --info: #0c6e91;
-    --info-soft: rgba(12, 110, 145, 0.11);
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
-    --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05);
-  }
+  /* Light mode */
+  :root[data-theme='light'],
+  [data-theme='light'] ::backdrop {
+    --sl-color-white: var(--fg-strong) !important;
+    --sl-color-gray-1: var(--fg) !important;
+    --sl-color-gray-2: var(--fg-muted) !important;
+    --sl-color-gray-3: var(--fg-subtle) !important;
+    --sl-color-gray-4: var(--fg-dim) !important;
+    --sl-color-gray-5: var(--border-strong) !important;
+    --sl-color-gray-6: var(--border) !important;
+    --sl-color-black: var(--bg) !important;
 
-  /* ======== MAPPING KE STARLIGHT (hanya warna & shadow) ======== */
-  :root,
-  [data-theme='dark'] {
-    --sl-color-white: var(--fg-strong);
-    --sl-color-gray-1: var(--fg);
-    --sl-color-gray-2: var(--fg-muted);
-    --sl-color-gray-3: var(--fg-subtle);
-    --sl-color-gray-4: var(--fg-dim);
-    --sl-color-gray-5: var(--border-strong);
-    --sl-color-gray-6: var(--border);
-    --sl-color-black: var(--bg);
+    --sl-color-orange: var(--warning) !important;
+    --sl-color-orange-low: var(--warning-soft) !important;
+    --sl-color-orange-high: var(--warning) !important;
+    --sl-color-green: var(--success) !important;
+    --sl-color-green-low: var(--success-soft) !important;
+    --sl-color-green-high: var(--success) !important;
+    --sl-color-blue: var(--info) !important;
+    --sl-color-blue-low: var(--info-soft) !important;
+    --sl-color-blue-high: var(--info) !important;
+    --sl-color-red: var(--error) !important;
+    --sl-color-red-low: var(--error-soft) !important;
+    --sl-color-red-high: var(--error) !important;
+    --sl-color-purple: oklch(0.62 0.15 300) !important;
+    --sl-color-purple-low: oklch(0.62 0.15 300 / 0.15) !important;
+    --sl-color-purple-high: oklch(0.62 0.15 300) !important;
 
-    --sl-color-orange: var(--warning);
-    --sl-color-orange-low: var(--warning-soft);
-    --sl-color-orange-high: var(--warning);
+    --sl-color-accent: var(--accent) !important;
+    --sl-color-accent-low: var(--accent-soft) !important;
+    --sl-color-accent-high: var(--accent) !important;
 
-    --sl-color-green: var(--success);
-    --sl-color-green-low: var(--success-soft);
-    --sl-color-green-high: var(--success);
+    --sl-color-text: var(--fg) !important;
+    --sl-color-text-accent: var(--accent) !important;
+    --sl-color-text-invert: var(--fg-inverted) !important;
 
-    --sl-color-blue: var(--info);
-    --sl-color-blue-low: var(--info-soft);
-    --sl-color-blue-high: var(--info);
+    --sl-color-bg: var(--bg) !important;
+    --sl-color-bg-nav: var(--bg-subtle) !important;
+    --sl-color-bg-sidebar: var(--bg-subtle) !important;
+    --sl-color-bg-inline-code: var(--bg-muted) !important;
+    --sl-color-bg-accent: var(--accent-soft) !important;
 
-    --sl-color-red: var(--error);
-    --sl-color-red-low: var(--error-soft);
-    --sl-color-red-high: var(--error);
+    --sl-color-hairline-light: var(--border-subtle) !important;
+    --sl-color-hairline: var(--border) !important;
+    --sl-color-hairline-shade: var(--border-strong) !important;
 
-    --sl-color-purple: oklch(0.62 0.15 300);
-    --sl-color-purple-low: oklch(0.62 0.15 300 / 0.15);
-    --sl-color-purple-high: oklch(0.62 0.15 300);
+    --sl-color-backdrop-overlay: var(--bg-overlay) !important;
 
-    --sl-color-accent: var(--accent);
-    --sl-color-accent-low: var(--accent-soft);
-    --sl-color-accent-high: var(--accent);
-
-    --sl-color-text: var(--fg);
-    --sl-color-text-accent: var(--accent);
-    --sl-color-text-invert: var(--fg-inverted);
-
-    --sl-color-bg: var(--bg);
-    --sl-color-bg-nav: var(--bg-subtle);
-    --sl-color-bg-sidebar: var(--bg-subtle);
-    --sl-color-bg-inline-code: var(--bg-muted);
-    --sl-color-bg-accent: var(--accent-soft);
-
-    --sl-color-hairline-light: var(--border-subtle);
-    --sl-color-hairline: var(--border);
-    --sl-color-hairline-shade: var(--border-strong);
-
-    --sl-color-backdrop-overlay: var(--bg-overlay);
-
-    --sl-shadow-sm: var(--shadow-sm);
-    --sl-shadow-md: var(--shadow-md);
-    --sl-shadow-lg: var(--shadow-lg);
-  }
-
-  [data-theme='light'] {
-    --sl-color-white: var(--fg-strong);
-    --sl-color-gray-1: var(--fg);
-    --sl-color-gray-2: var(--fg-muted);
-    --sl-color-gray-3: var(--fg-subtle);
-    --sl-color-gray-4: var(--fg-dim);
-    --sl-color-gray-5: var(--border-strong);
-    --sl-color-gray-6: var(--border);
-    --sl-color-black: var(--bg);
-
-    --sl-color-orange: var(--warning);
-    --sl-color-orange-low: var(--warning-soft);
-    --sl-color-orange-high: var(--warning);
-
-    --sl-color-green: var(--success);
-    --sl-color-green-low: var(--success-soft);
-    --sl-color-green-high: var(--success);
-
-    --sl-color-blue: var(--info);
-    --sl-color-blue-low: var(--info-soft);
-    --sl-color-blue-high: var(--info);
-
-    --sl-color-red: var(--error);
-    --sl-color-red-low: var(--error-soft);
-    --sl-color-red-high: var(--error);
-
-    --sl-color-purple: oklch(0.62 0.15 300);
-    --sl-color-purple-low: oklch(0.62 0.15 300 / 0.15);
-    --sl-color-purple-high: oklch(0.62 0.15 300);
-
-    --sl-color-accent: var(--accent);
-    --sl-color-accent-low: var(--accent-soft);
-    --sl-color-accent-high: var(--accent);
-
-    --sl-color-text: var(--fg);
-    --sl-color-text-accent: var(--accent);
-    --sl-color-text-invert: var(--fg-inverted);
-
-    --sl-color-bg: var(--bg);
-    --sl-color-bg-nav: var(--bg-subtle);
-    --sl-color-bg-sidebar: var(--bg-subtle);
-    --sl-color-bg-inline-code: var(--bg-muted);
-    --sl-color-bg-accent: var(--accent-soft);
-
-    --sl-color-hairline-light: var(--border-subtle);
-    --sl-color-hairline: var(--border);
-    --sl-color-hairline-shade: var(--border-strong);
-
-    --sl-color-backdrop-overlay: var(--bg-overlay);
-
-    --sl-shadow-sm: var(--shadow-sm);
-    --sl-shadow-md: var(--shadow-md);
-    --sl-shadow-lg: var(--shadow-lg);
+    --sl-shadow-sm: var(--shadow-sm) !important;
+    --sl-shadow-md: var(--shadow-md) !important;
+    --sl-shadow-lg: var(--shadow-lg) !important;
   }
 }
