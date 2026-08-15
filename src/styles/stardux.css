@@ -1,58 +1,58 @@
 @layer starlight.base {
 	:root,
 	::backdrop {
-		--sl-color-white: #ffffff;
-		--sl-color-gray-1: #ededed;
-		--sl-color-gray-2: #a0a0a0;
-		--sl-color-gray-3: #7d7d7d;
-		--sl-color-gray-4: #4d4d4d;
-		--sl-color-gray-5: #3a3a3a;
-		--sl-color-gray-6: #262626;
-		--sl-color-black: #0a0a0a;
+		--sl-color-white: #ffffff !important;
+		--sl-color-gray-1: #ededed !important;
+		--sl-color-gray-2: #a0a0a0 !important;
+		--sl-color-gray-3: #7d7d7d !important;
+		--sl-color-gray-4: #4d4d4d !important;
+		--sl-color-gray-5: #3a3a3a !important;
+		--sl-color-gray-6: #262626 !important;
+		--sl-color-black: #0a0a0a !important;
 
-		--sl-color-orange: #ffab5c;
-		--sl-color-orange-low: rgba(255, 171, 92, 0.14);
-		--sl-color-orange-high: #ffab5c;
+		--sl-color-orange: #ffab5c !important;
+		--sl-color-orange-low: rgba(255, 171, 92, 0.14) !important;
+		--sl-color-orange-high: #ffab5c !important;
 
-		--sl-color-green: #34e0a1;
-		--sl-color-green-low: rgba(52, 224, 161, 0.14);
-		--sl-color-green-high: #34e0a1;
+		--sl-color-green: #34e0a1 !important;
+		--sl-color-green-low: rgba(52, 224, 161, 0.14) !important;
+		--sl-color-green-high: #34e0a1 !important;
 
-		--sl-color-blue: #2adcf5;
-		--sl-color-blue-low: rgba(42, 220, 245, 0.14);
-		--sl-color-blue-high: #2adcf5;
+		--sl-color-blue: #2adcf5 !important;
+		--sl-color-blue-low: rgba(42, 220, 245, 0.14) !important;
+		--sl-color-blue-high: #2adcf5 !important;
 
-		--sl-color-red: #ff7b86;
-		--sl-color-red-low: rgba(255, 123, 134, 0.14);
-		--sl-color-red-high: #ff7b86;
+		--sl-color-red: #ff7b86 !important;
+		--sl-color-red-low: rgba(255, 123, 134, 0.14) !important;
+		--sl-color-red-high: #ff7b86 !important;
 
-		--sl-color-purple: oklch(0.62 0.15 300);
-		--sl-color-purple-low: oklch(0.62 0.15 300 / 0.15);
-		--sl-color-purple-high: oklch(0.62 0.15 300);
+		--sl-color-purple: oklch(0.62 0.15 300) !important;
+		--sl-color-purple-low: oklch(0.62 0.15 300 / 0.15) !important;
+		--sl-color-purple-high: oklch(0.62 0.15 300) !important;
 
-		--sl-color-accent: #e8b93a;
-		--sl-color-accent-low: rgba(232, 185, 58, 0.12);
-		--sl-color-accent-high: #e8b93a;
+		--sl-color-accent: #e8b93a !important;
+		--sl-color-accent-low: rgba(232, 185, 58, 0.12) !important;
+		--sl-color-accent-high: #e8b93a !important;
 
-		--sl-color-text: #ededed;
-		--sl-color-text-accent: #e8b93a;
-		--sl-color-text-invert: #0a0a0a;
+		--sl-color-text: #ededed !important;
+		--sl-color-text-accent: #e8b93a !important;
+		--sl-color-text-invert: #0a0a0a !important;
 
-		--sl-color-bg: #0a0a0a;
-		--sl-color-bg-nav: #101010;
-		--sl-color-bg-sidebar: #101010;
-		--sl-color-bg-inline-code: #181818;
-		--sl-color-bg-accent: rgba(232, 185, 58, 0.12);
+		--sl-color-bg: #0a0a0a !important;
+		--sl-color-bg-nav: #101010 !important;
+		--sl-color-bg-sidebar: #101010 !important;
+		--sl-color-bg-inline-code: #181818 !important;
+		--sl-color-bg-accent: rgba(232, 185, 58, 0.12) !important;
 
-		--sl-color-hairline-light: #161616;
-		--sl-color-hairline: #262626;
-		--sl-color-hairline-shade: #3a3a3a;
+		--sl-color-hairline-light: #161616 !important;
+		--sl-color-hairline: #262626 !important;
+		--sl-color-hairline-shade: #3a3a3a !important;
 
-		--sl-color-backdrop-overlay: rgba(10, 10, 10, 0.92);
+		--sl-color-backdrop-overlay: rgba(10, 10, 10, 0.92) !important;
 
-		--sl-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.80);
-		--sl-shadow-md: 0 6px 16px rgba(0, 0, 0, 0.60), 0 0 20px rgba(232, 185, 58, 0.05);
-		--sl-shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.68), 0 0 32px rgba(232, 185, 58, 0.07);
+		--sl-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.80) !important;
+		--sl-shadow-md: 0 6px 16px rgba(0, 0, 0, 0.60), 0 0 20px rgba(232, 185, 58, 0.05) !important;
+		--sl-shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.68), 0 0 32px rgba(232, 185, 58, 0.07) !important;
 	}
 
 	/* ============================================================
@@ -60,58 +60,58 @@
 	   ============================================================ */
 	:root[data-theme='light'],
 	[data-theme='light'] ::backdrop {
-		--sl-color-white: #000000;
-		--sl-color-gray-1: #111111;
-		--sl-color-gray-2: #525252;
-		--sl-color-gray-3: #6b6b6b;
-		--sl-color-gray-4: #9e9e9e;
-		--sl-color-gray-5: #d0d0d0;
-		--sl-color-gray-6: #e5e5e5;
-		--sl-color-gray-7: #fafafa; /* Starlight punya di light */
-		--sl-color-black: #ffffff;
+		--sl-color-white: #000000 !important;
+		--sl-color-gray-1: #111111 !important;
+		--sl-color-gray-2: #525252 !important;
+		--sl-color-gray-3: #6b6b6b !important;
+		--sl-color-gray-4: #9e9e9e !important;
+		--sl-color-gray-5: #d0d0d0 !important;
+		--sl-color-gray-6: #e5e5e5 !important;
+		--sl-color-gray-7: #fafafa !important; /* Starlight punya di light */
+		--sl-color-black: #ffffff !important;
 
-		--sl-color-orange: #b8440a;
-		--sl-color-orange-low: rgba(184, 68, 10, 0.11);
-		--sl-color-orange-high: #b8440a;
+		--sl-color-orange: #b8440a !important;
+		--sl-color-orange-low: rgba(184, 68, 10, 0.11) !important;
+		--sl-color-orange-high: #b8440a !important;
 
-		--sl-color-green: #0f7a4b;
-		--sl-color-green-low: rgba(15, 122, 75, 0.11);
-		--sl-color-green-high: #0f7a4b;
+		--sl-color-green: #0f7a4b !important;
+		--sl-color-green-low: rgba(15, 122, 75, 0.11) !important;
+		--sl-color-green-high: #0f7a4b !important;
 
-		--sl-color-blue: #0c6e91;
-		--sl-color-blue-low: rgba(12, 110, 145, 0.11);
-		--sl-color-blue-high: #0c6e91;
+		--sl-color-blue: #0c6e91 !important;
+		--sl-color-blue-low: rgba(12, 110, 145, 0.11) !important;
+		--sl-color-blue-high: #0c6e91 !important;
 
-		--sl-color-red: #c22a35;
-		--sl-color-red-low: rgba(194, 42, 53, 0.11);
-		--sl-color-red-high: #c22a35;
+		--sl-color-red: #c22a35 !important;
+		--sl-color-red-low: rgba(194, 42, 53, 0.11) !important;
+		--sl-color-red-high: #c22a35 !important;
 
-		--sl-color-purple: oklch(0.62 0.15 300);
-		--sl-color-purple-low: oklch(0.62 0.15 300 / 0.15);
-		--sl-color-purple-high: oklch(0.62 0.15 300);
+		--sl-color-purple: oklch(0.62 0.15 300) !important;
+		--sl-color-purple-low: oklch(0.62 0.15 300 / 0.15) !important;
+		--sl-color-purple-high: oklch(0.62 0.15 300) !important;
 
-		--sl-color-accent: #6b7075;
-		--sl-color-accent-low: rgba(107, 112, 117, 0.09);
-		--sl-color-accent-high: #6b7075;
+		--sl-color-accent: #6b7075 !important;
+		--sl-color-accent-low: rgba(107, 112, 117, 0.09) !important;
+		--sl-color-accent-high: #6b7075 !important;
 
-		--sl-color-text: #111111;
-		--sl-color-text-accent: #6b7075;
-		--sl-color-text-invert: #ffffff;
+		--sl-color-text: #111111 !important;
+		--sl-color-text-accent: #6b7075 !important;
+		--sl-color-text-invert: #ffffff !important;
 
-		--sl-color-bg: #ffffff;
-		--sl-color-bg-nav: #fafafa;
-		--sl-color-bg-sidebar: #ffffff;
-		--sl-color-bg-inline-code: #f0f0f0;
-		--sl-color-bg-accent: rgba(107, 112, 117, 0.09);
+		--sl-color-bg: #ffffff !important;
+		--sl-color-bg-nav: #fafafa !important;
+		--sl-color-bg-sidebar: #ffffff !important;
+		--sl-color-bg-inline-code: #f0f0f0 !important;
+		--sl-color-bg-accent: rgba(107, 112, 117, 0.09) !important;
 
-		--sl-color-hairline-light: #efefef;
-		--sl-color-hairline: #e5e5e5;
-		--sl-color-hairline-shade: #d0d0d0;
+		--sl-color-hairline-light: #efefef !important;
+		--sl-color-hairline: #e5e5e5 !important;
+		--sl-color-hairline-shade: #d0d0d0 !important;
 
-		--sl-color-backdrop-overlay: rgba(255, 255, 255, 0.94);
+		--sl-color-backdrop-overlay: rgba(255, 255, 255, 0.94) !important;
 
-		--sl-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-		--sl-shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
-		--sl-shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05);
+		--sl-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06) !important;
+		--sl-shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+		--sl-shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05) !important;
 	}
 }
