@@ -7,6 +7,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'stardux',
+    customCss: [
+        './src/styles/stardux.css',
+      ],
 			social: [
 				{ 
 					icon: 'github', 
