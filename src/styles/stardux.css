@@ -1,0 +1,482 @@
+/* ============================================================
+   stardux.css — Tema lengkap Starlight + variabel kustom
+   (Tanpa Tailwind, murni CSS)
+   ============================================================ */
+
+/* ------------------------------------------------------------------
+   1. Variabel kustom (dark / light) – diadaptasi dari global.css
+   ------------------------------------------------------------------ */
+:root,
+[data-theme='dark'] {
+  --bg:         #0a0a0a;
+  --bg-subtle:  #101010;
+  --bg-muted:   #181818;
+  --bg-elevated:#1f1f1f;
+  --bg-overlay: rgba(10, 10, 10, 0.92);
+
+  --fg:         #ededed;
+  --fg-strong:  #ffffff;
+  --fg-muted:   #a0a0a0;
+  --fg-subtle:  #7d7d7d;
+  --fg-dim:     #4d4d4d;
+  --fg-disabled:#333333;
+  --fg-inverted:#0a0a0a;
+
+  --border:        #262626;
+  --border-strong: #3a3a3a;
+  --border-subtle: #161616;
+
+  --surface:         var(--bg);
+  --surface-subtle:  var(--bg-subtle);
+  --surface-muted:   var(--bg-muted);
+  --surface-elevated:var(--bg-elevated);
+
+  --accent:        #e8b93a;
+  --accent-dim:    rgba(232, 185, 58, 0.34);
+  --accent-soft:   rgba(232, 185, 58, 0.12);
+  --accent-ring:   rgba(232, 185, 58, 0.30);
+  --accent-border: rgba(232, 185, 58, 0.44);
+  --accent-fg:     #241900;
+
+  --secondary:          #e4e2dc;
+  --secondary-subtle:   rgba(228, 226, 220, 0.08);
+  --secondary-muted:    rgba(228, 226, 220, 0.16);
+  --secondary-tertiary: rgba(228, 226, 220, 0.26);
+  --secondary-border:   rgba(228, 226, 220, 0.38);
+  --secondary-fg:       #1a1815;
+
+  --success:      #34e0a1;
+  --success-soft: rgba(52, 224, 161, 0.14);
+  --success-fg:   #052e1c;
+
+  --error:        #ff7b86;
+  --error-soft:   rgba(255, 123, 134, 0.14);
+  --error-fg:     #2b0509;
+
+  --warning:      #ffab5c;
+  --warning-soft: rgba(255, 171, 92, 0.14);
+  --warning-fg:   #2b1500;
+
+  --info:         #2adcf5;
+  --info-soft:    rgba(42, 220, 245, 0.14);
+  --info-fg:      #04252b;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.80);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.60), 0 0 20px rgba(232, 185, 58, 0.05);
+  --shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.68), 0 0 32px rgba(232, 185, 58, 0.07);
+  --shadow-xl: 0 22px 40px rgba(0, 0, 0, 0.76), 0 0 44px rgba(232, 185, 58, 0.09);
+}
+
+[data-theme='light'] {
+  --bg:         #ffffff;
+  --bg-subtle:  #fafafa;
+  --bg-muted:   #f0f0f0;
+  --bg-elevated:#ffffff;
+  --bg-overlay: rgba(255, 255, 255, 0.94);
+
+  --fg:         #111111;
+  --fg-strong:  #000000;
+  --fg-muted:   #525252;
+  --fg-subtle:  #6b6b6b;
+  --fg-dim:     #9e9e9e;
+  --fg-disabled:#c7c7c7;
+  --fg-inverted:#ffffff;
+
+  --border:        #e5e5e5;
+  --border-strong: #d0d0d0;
+  --border-subtle: #efefef;
+
+  --surface:         var(--bg);
+  --surface-subtle:  var(--bg-subtle);
+  --surface-muted:   var(--bg-muted);
+  --surface-elevated:var(--bg-elevated);
+
+  --accent:        #6b7075;
+  --accent-dim:    rgba(107, 112, 117, 0.22);
+  --accent-soft:   rgba(107, 112, 117, 0.09);
+  --accent-ring:   rgba(107, 112, 117, 0.28);
+  --accent-border: rgba(107, 112, 117, 0.40);
+  --accent-fg:     #ffffff;
+
+  --secondary:          #8a6a00;
+  --secondary-subtle:   rgba(138, 106, 0, 0.06);
+  --secondary-muted:    rgba(138, 106, 0, 0.12);
+  --secondary-tertiary: rgba(138, 106, 0, 0.20);
+  --secondary-border:   rgba(138, 106, 0, 0.32);
+  --secondary-fg:       #ffffff;
+
+  --success:      #0f7a4b;
+  --success-soft: rgba(15, 122, 75, 0.11);
+  --success-fg:   #ffffff;
+
+  --error:        #c22a35;
+  --error-soft:   rgba(194, 42, 53, 0.11);
+  --error-fg:     #ffffff;
+
+  --warning:      #b8440a;
+  --warning-soft: rgba(184, 68, 10, 0.11);
+  --warning-fg:   #ffffff;
+
+  --info:         #0c6e91;
+  --info-soft:    rgba(12, 110, 145, 0.11);
+  --info-fg:      #ffffff;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 22px 32px rgba(0, 0, 0, 0.11), 0 6px 10px rgba(0, 0, 0, 0.06);
+}
+
+:root {
+  --scroll-padding: 2rem;
+  --header-height: 56px;
+}
+
+/* ------------------------------------------------------------------
+   2. Base styles (dari global.css)
+   ------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+* {
+  margin: 0;
+  scrollbar-color: var(--fg-dim) transparent;
+  scrollbar-width: thin;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px; /* --radius-sm jika didefinisikan */
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+[disabled],
+[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: var(--fg-dim);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fg-muted);
+}
+
+html {
+  color-scheme: dark;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgb(from var(--accent) r g b / 0.2);
+}
+html[data-theme='light'] {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);
+  font-feature-settings: "ss01" on, "ss02" on, "kern" on;
+  text-rendering: optimizeLegibility;
+  hanging-punctuation: first last;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--fg);
+  background: var(--bg);
+
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding);
+}
+
+img,
+picture,
+video,
+canvas,
+iframe,
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--fg-subtle);
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+p, h1, h2, h3, h4, h5, h6, code {
+  overflow-wrap: break-word;
+}
+code, kbd, samp, pre {
+  text-autospace: no-autospace;
+}
+code {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0 !important;
+}
+
+@media (max-width: 45rem) {
+  :root {
+    --scroll-padding: 4rem;
+  }
+}
+
+/* ------------------------------------------------------------------
+   3. Override Starlight – petakan semua variabel bawaan ke kustom
+   ------------------------------------------------------------------ */
+@layer starlight.base {
+  :root,
+  ::backdrop {
+    /* Skala abu-abu & putih/hitam */
+    --sl-color-white: var(--fg-strong);
+    --sl-color-gray-1: var(--fg);
+    --sl-color-gray-2: var(--fg-muted);
+    --sl-color-gray-3: var(--fg-subtle);
+    --sl-color-gray-4: var(--fg-dim);
+    --sl-color-gray-5: var(--border-strong);
+    --sl-color-gray-6: var(--border);
+    --sl-color-black: var(--bg);
+
+    /* Warna tematik */
+    --sl-color-orange: var(--warning);
+    --sl-color-orange-low: var(--warning-soft);
+    --sl-color-orange-high: var(--warning);
+
+    --sl-color-green: var(--success);
+    --sl-color-green-low: var(--success-soft);
+    --sl-color-green-high: var(--success);
+
+    --sl-color-blue: var(--info);
+    --sl-color-blue-low: var(--info-soft);
+    --sl-color-blue-high: var(--info);
+
+    --sl-color-red: var(--error);
+    --sl-color-red-low: var(--error-soft);
+    --sl-color-red-high: var(--error);
+
+    /* Ungu (ambil dari chart-4 atau fallback) */
+    --sl-color-purple: oklch(0.62 0.15 300);
+    --sl-color-purple-low: oklch(0.62 0.15 300 / 0.15);
+    --sl-color-purple-high: oklch(0.62 0.15 300);
+
+    /* Aksen utama */
+    --sl-color-accent: var(--accent);
+    --sl-color-accent-low: var(--accent-soft);
+    --sl-color-accent-high: var(--accent);
+
+    /* Teks & latar */
+    --sl-color-text: var(--fg);
+    --sl-color-text-accent: var(--accent);
+    --sl-color-text-invert: var(--fg-inverted);
+
+    --sl-color-bg: var(--bg);
+    --sl-color-bg-nav: var(--bg-subtle);
+    --sl-color-bg-sidebar: var(--bg-subtle);
+    --sl-color-bg-inline-code: var(--bg-muted);
+    --sl-color-bg-accent: var(--accent-soft);
+
+    --sl-color-hairline-light: var(--border-subtle);
+    --sl-color-hairline: var(--border);
+    --sl-color-hairline-shade: var(--border-strong);
+
+    --sl-color-backdrop-overlay: var(--bg-overlay);
+
+    /* Bayangan */
+    --sl-shadow-sm: var(--shadow-sm);
+    --sl-shadow-md: var(--shadow-md);
+    --sl-shadow-lg: var(--shadow-lg);
+
+    /* Ukuran teks & tinggi baris (tetap pakai bawaan) */
+    --sl-text-2xs: 0.75rem;
+    --sl-text-xs: 0.8125rem;
+    --sl-text-sm: 0.875rem;
+    --sl-text-base: 1rem;
+    --sl-text-lg: 1.125rem;
+    --sl-text-xl: 1.25rem;
+    --sl-text-2xl: 1.5rem;
+    --sl-text-3xl: 1.8125rem;
+    --sl-text-4xl: 2.1875rem;
+    --sl-text-5xl: 2.625rem;
+    --sl-text-6xl: 4rem;
+
+    --sl-text-body: var(--sl-text-base);
+    --sl-text-body-sm: var(--sl-text-xs);
+    --sl-text-code: var(--sl-text-sm);
+    --sl-text-code-sm: var(--sl-text-xs);
+    --sl-text-h1: var(--sl-text-4xl);
+    --sl-text-h2: var(--sl-text-3xl);
+    --sl-text-h3: var(--sl-text-2xl);
+    --sl-text-h4: var(--sl-text-xl);
+    --sl-text-h5: var(--sl-text-lg);
+
+    --sl-line-height: 1.75;
+    --sl-line-height-headings: 1.2;
+
+    /* Font (gunakan fallback sistem) */
+    --sl-font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+      'Noto Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+    --sl-font-system-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace;
+    --__sl-font: var(--sl-font, var(--sl-font-system)), var(--sl-font-system);
+    --__sl-font-mono: var(--sl-font-mono, var(--sl-font-system-mono)), var(--sl-font-system-mono);
+
+    /* Layout */
+    --sl-nav-height: 3.5rem;
+    --sl-nav-pad-x: 1rem;
+    --sl-nav-pad-y: 0.75rem;
+    --sl-mobile-toc-height: 3rem;
+    --sl-sidebar-width: 18.75rem;
+    --sl-sidebar-pad-x: 1rem;
+    --sl-content-width: 45rem;
+    --sl-content-pad-x: 1rem;
+    --sl-content-gap-y: 1rem;
+    --sl-main-pad: 0 0 3vh 0;
+    --sl-menu-button-size: 2rem;
+    --sl-nav-gap: var(--sl-content-pad-x);
+    --sl-outline-offset-inside: -0.1875rem;
+
+    /* Z-index */
+    --sl-z-index-toc: 4;
+    --sl-z-index-menu: 5;
+    --sl-z-index-navbar: 10;
+    --sl-z-index-skiplink: 20;
+  }
+
+  /* Mode terang – ulangi semua override */
+  [data-theme='light'],
+  [data-theme='light'] ::backdrop {
+    --sl-color-white: var(--fg-strong);
+    --sl-color-gray-1: var(--fg);
+    --sl-color-gray-2: var(--fg-muted);
+    --sl-color-gray-3: var(--fg-subtle);
+    --sl-color-gray-4: var(--fg-dim);
+    --sl-color-gray-5: var(--border-strong);
+    --sl-color-gray-6: var(--border);
+    --sl-color-black: var(--bg);
+
+    --sl-color-orange: var(--warning);
+    --sl-color-orange-low: var(--warning-soft);
+    --sl-color-orange-high: var(--warning);
+
+    --sl-color-green: var(--success);
+    --sl-color-green-low: var(--success-soft);
+    --sl-color-green-high: var(--success);
+
+    --sl-color-blue: var(--info);
+    --sl-color-blue-low: var(--info-soft);
+    --sl-color-blue-high: var(--info);
+
+    --sl-color-red: var(--error);
+    --sl-color-red-low: var(--error-soft);
+    --sl-color-red-high: var(--error);
+
+    --sl-color-purple: oklch(0.62 0.15 300);
+    --sl-color-purple-low: oklch(0.62 0.15 300 / 0.15);
+    --sl-color-purple-high: oklch(0.62 0.15 300);
+
+    --sl-color-accent: var(--accent);
+    --sl-color-accent-low: var(--accent-soft);
+    --sl-color-accent-high: var(--accent);
+
+    --sl-color-text: var(--fg);
+    --sl-color-text-accent: var(--accent);
+    --sl-color-text-invert: var(--fg-inverted);
+
+    --sl-color-bg: var(--bg);
+    --sl-color-bg-nav: var(--bg-subtle);
+    --sl-color-bg-sidebar: var(--bg-subtle);
+    --sl-color-bg-inline-code: var(--bg-muted);
+    --sl-color-bg-accent: var(--accent-soft);
+
+    --sl-color-hairline-light: var(--border-subtle);
+    --sl-color-hairline: var(--border);
+    --sl-color-hairline-shade: var(--border-strong);
+
+    --sl-color-backdrop-overlay: var(--bg-overlay);
+
+    --sl-shadow-sm: var(--shadow-sm);
+    --sl-shadow-md: var(--shadow-md);
+    --sl-shadow-lg: var(--shadow-lg);
+  }
+
+  /* Responsif ukuran teks */
+  @media (min-width: 50em) {
+    :root {
+      --sl-nav-height: 4rem;
+      --sl-nav-pad-x: 1.5rem;
+      --sl-text-h1: var(--sl-text-5xl);
+      --sl-text-h2: var(--sl-text-4xl);
+      --sl-text-h3: var(--sl-text-3xl);
+      --sl-text-h4: var(--sl-text-2xl);
+    }
+  }
+  @media (min-width: 72rem) {
+    :root {
+      --sl-content-pad-x: 1.5rem;
+      --sl-mobile-toc-height: 0rem;
+    }
+  }
+}
