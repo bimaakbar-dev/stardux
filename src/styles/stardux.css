@@ -1,10 +1,9 @@
-/* stardux.css – override warna Starlight (hardcode, hanya warna) */
+/* stardux.css – Semua warna Starlight di-hardcode dari global.css (1 file) */
 
 @layer starlight.base {
-  /* === DARK MODE (default) === */
+  /* ======================== DARK MODE ======================== */
   :root,
   [data-theme='dark'] {
-    /* Skala abu-abu & putih/hitam */
     --sl-color-white: #ffffff;
     --sl-color-gray-1: #ededed;
     --sl-color-gray-2: #a0a0a0;
@@ -14,7 +13,6 @@
     --sl-color-gray-6: #262626;
     --sl-color-black: #0a0a0a;
 
-    /* Warna tematik */
     --sl-color-orange: #ffab5c;
     --sl-color-orange-low: rgba(255, 171, 92, 0.14);
     --sl-color-orange-high: #ffab5c;
@@ -35,12 +33,10 @@
     --sl-color-purple-low: oklch(0.62 0.15 300 / 0.15);
     --sl-color-purple-high: oklch(0.62 0.15 300);
 
-    /* Aksen utama */
     --sl-color-accent: #e8b93a;
     --sl-color-accent-low: rgba(232, 185, 58, 0.12);
     --sl-color-accent-high: #e8b93a;
 
-    /* Teks & latar */
     --sl-color-text: #ededed;
     --sl-color-text-accent: #e8b93a;
     --sl-color-text-invert: #0a0a0a;
@@ -57,13 +53,12 @@
 
     --sl-color-backdrop-overlay: rgba(10, 10, 10, 0.92);
 
-    /* Bayangan */
     --sl-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.80);
     --sl-shadow-md: 0 6px 16px rgba(0, 0, 0, 0.60), 0 0 20px rgba(232, 185, 58, 0.05);
     --sl-shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.68), 0 0 32px rgba(232, 185, 58, 0.07);
   }
 
-  /* === LIGHT MODE === */
+  /* ======================== LIGHT MODE ======================== */
   [data-theme='light'] {
     --sl-color-white: #000000;
     --sl-color-gray-1: #111111;
