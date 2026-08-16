@@ -1,3 +1,7 @@
+.sl-markdown-content .card {
+	border-radius: 30px;
+}
+
 .card {
 	--sl-card-border: var(--sl-color-purple);
 	--sl-card-bg: var(--sl-color-purple-low);
