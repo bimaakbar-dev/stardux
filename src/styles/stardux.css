@@ -117,3 +117,5 @@
 		--sl-shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.09), 0 3px 6px rgba(0, 0, 0, 0.05) !important;
 	}
 }
+
+@import './Card.css';
