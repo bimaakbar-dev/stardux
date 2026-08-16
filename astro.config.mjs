@@ -25,6 +25,7 @@ export default defineConfig({
 					label: 'Debug',
 					items: [
 						{ label: 'Tipography', slug: 'debug/tipography' },
+						{ label: 'Components', slug: 'debug/components' },
 					],
 				},
 				{
