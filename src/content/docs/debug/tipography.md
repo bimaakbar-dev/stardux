@@ -1,7 +1,7 @@
 ---
 title: "Tipography"
 description: "Visual reference for all standard Markdown elements in Unloyd."
-order: 2
+order: 1
 draft: false
 lastUpdated: 2026-08-13
 ---
