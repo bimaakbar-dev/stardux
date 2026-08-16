@@ -1,12 +1,12 @@
 ---
-title: "Markdown Elements"
+title: "Tipography"
 description: "Visual reference for all standard Markdown elements in Unloyd."
 order: 2
 draft: false
-lastUpdated: 2026-08-16T13:07:00Z
+lastUpdated: 2026-08-13
 ---
 
-Visual reference for how standard Markdown elements render in Unloyd theme.
+Visual reference for how standard Markdown elements render in Unloyd Themes.
 
 ---
 
@@ -43,8 +43,6 @@ Visual reference for how standard Markdown elements render in Unloyd theme.
 ## Blockquote
 
 > This is a blockquote.
->
-> It can span multiple paragraphs.
 
 ## Table
 
@@ -70,9 +68,7 @@ console.log(greeting); // [!code ++]
 
 [Internal link](/docs/) — [External link](https://github.com)
 
-
-
-![OG Image](../../../assets/images/houston.webp)
+![Image](../../../assets/houston.webp)
 
 
 ## Footnotes
