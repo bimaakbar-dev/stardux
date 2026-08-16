@@ -1,66 +1,86 @@
 ---
-title: Preview Tipografi
-description: Halaman demo untuk melihat gaya teks dan elemen Markdown
+title: "Markdown Elements"
+description: "Visual reference for all standard Markdown elements in Unloyd."
+order: 2
+draft: false
+lastUpdate: 2026-08-16T13:07:00Z
 ---
 
-# Heading 1 – Judul Utama
-
-Paragraf pertama berisi teks biasa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
-
-## Heading 2 – Sub Bab
-
-Paragraf di bawah heading 2. Ini adalah teks yang menjelaskan bagian tersebut. Bisa berisi **teks tebal**, *teks miring*, atau ***keduanya***.
-
-### Heading 3 – Sub-sub Bab
-
-Kita juga bisa menambahkan `inline code` seperti ini, atau link ke [halaman lain](/).
-
-#### Heading 4 – Detail Lebih Dalam
-
-- List tanpa urutan (bullet)
-- Item kedua
-  - Item bersarang
-  - Item bersarang lainnya
-- Item ketiga
-
-1. List berurutan (numbered)
-2. Item kedua
-   1. Sub-item
-   2. Sub-item lain
-3. Item ketiga
+Visual reference for how standard Markdown elements render in Unloyd theme.
 
 ---
 
-## Blok Kutipan
+## Headings
 
-> Ini adalah blockquote. Biasanya digunakan untuk kutipan atau catatan penting.
-> 
-> Bisa terdiri dari beberapa paragraf.
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 
----
+## Emphasis
 
-## Tabel
+**Bold** — *Italic* — ***Bold Italic*** — ~~Strikethrough~~ — `Inline code`
 
-| Kolom 1      | Kolom 2      | Kolom 3      |
-|--------------|--------------|--------------|
-| Data A       | 100          | ✅           |
-| Data B       | 200          | ❌           |
-| Data C       | 300          | ➖           |
+## Lists
 
----
+- Item one
+- Item two
+  - Nested item
+  - Another nested item
+- Item three
 
-## Gambar (placeholder)
+1. First step
+2. Second step
+   1. Sub-step
+   2. Another sub-step
+3. Third step
 
-![Placeholder gambar](https://via.placeholder.com/600x200?text=Gambar+Preview)
+- [x] Completed task
+- [ ] Incomplete task
 
----
+## Blockquote
 
-## Garis Horizontal
+> This is a blockquote.
+>
+> It can span multiple paragraphs.
 
----
+## Table
 
-## Highlight & Catatan
+| Feature | Status | Version |
+| --- | --- | --- |
+| Astro 7 | ✅ | 7.2.0 |
+| TailwindCSS 4 | ✅ | 4.0.0 |
+| Sätteri | ✅ | 0.5.0 |
 
-**Catatan penting:** Gunakan variabel CSS Starlight (`--sl-color-*`) untuk konsistensi tema.
+## Code
 
-*Efek miring juga bisa digunakan untuk penekanan.*
+```js
+const greeting = 'Hello, world!';
+console.log(greeting);
+```
+
+```js
+const greeting = 'Hello, world!'; // [!code --]
+console.log(greeting); // [!code ++]
+```
+
+## Links & Images
+
+[Internal link](/docs/) — [External link](https://github.com)
+
+
+
+![OG Image](../../../assets/images/houston.webp)
+
+
+## Footnotes
+
+Here is a sentence with a footnote[^1].
+
+[^1]: This is the footnote content.
+
+## Keyboard Input
+
+Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open search.
