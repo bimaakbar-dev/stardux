@@ -34,8 +34,8 @@ export default defineConfig({
 				{
 					label: 'Components',
 					items: [
-						{ label: 'Cards', slug: 'guides/cards-stardux' },
-						{ label: 'Link Cards', slug: 'guides/linkcards-stardux' },
+						{ label: 'Cards', slug: 'components/cards-stardux' },
+						{ label: 'Link Cards', slug: 'components/linkcards-stardux' },
 					],
 				},
 				{
