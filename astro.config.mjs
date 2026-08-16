@@ -22,7 +22,6 @@ export default defineConfig({
 					label: 'Debug',
 					items: [
 						{ label: 'Tipography', slug: 'debug/tipography' },
-						{ label: 'Components', slug: 'debug/components' },
 					],
 				},
 				{
@@ -30,6 +29,13 @@ export default defineConfig({
 					items: [
 						{ label: 'Example Guide', slug: 'guides/example' },
 						{ label: 'Example Guide', slug: 'guides/example' },
+					],
+				},
+				{
+					label: 'Components',
+					items: [
+						{ label: 'Cards', slug: 'guides/cards-stardux' },
+						{ label: 'Link Cards', slug: 'guides/linkcards-stardux' },
 					],
 				},
 				{
