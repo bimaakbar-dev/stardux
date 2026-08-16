@@ -1,0 +1,68 @@
+---
+title: File Tree
+draft: false
+lastUpdated: 2026-08-16
+sidebar:
+  label: File Tree
+  badge: New
+  order: 4
+---
+
+import { FileTree } from '@astrojs/starlight/components';
+
+##Preview
+
+<FileTree>
+
+- astro.config.mjs
+- package.json
+- src
+  - components
+    - Header.astro
+    - Title.astro
+  - pages/
+
+</FileTree>
+
+### With Highlight
+
+<FileTree>
+
+- src
+  - components
+    - **Header.astro**
+    - Title.astro
+
+</FileTree>
+
+### With Comments
+
+<FileTree>
+
+- src
+  - components
+    - Header.astro an **important** file
+    - Title.astro
+
+</FileTree>
+
+### Placeholder
+
+<FileTree>
+
+- src
+  - components
+    - Header.astro
+    - …
+
+</FileTree>
+
+### Escape characters
+
+<FileTree>
+
+- `__init__.py`
+- `Hello world.txt`
+- **`READ ME FIRST.md`**
+
+</FileTree>
