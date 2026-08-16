@@ -8,11 +8,8 @@ export default defineConfig({
 		starlight({
 			title: 'stardux',
 			customCss: [
-        		'./src/styles/stardux.css',
-      	  ],
-      	  components: {
-      	  	Card: './src/components/stardux/Card.astro',
-      	  },
+      './src/styles/stardux.css',
+    ],
 			social: [
 				{ 
 					icon: 'github', 
