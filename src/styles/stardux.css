@@ -1,3 +1,4 @@
+@import "./Card.css" layer(stardux);
 @layer starlight, stardux;
 
 @layer stardux {
@@ -130,5 +131,3 @@
 			0 3px 6px rgb(0 0 0 / 5%);
 	}
 }
-
-@import "./Card.css" layer(stardux);
