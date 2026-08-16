@@ -1,3 +1,5 @@
+/* src/styles/Card.css */
+
 .card {
 	--sl-card-border: var(--sl-color-purple);
 	--sl-card-bg: var(--sl-color-purple-low);
@@ -32,8 +34,8 @@
 	--sl-card-bg: var(--sl-color-blue-low);
 }
 
-.title {
-	font-weight: 500;
+.card .title {
+	font-weight: 600;
 	font-size: var(--sl-text-h4);
 	color: var(--sl-color-white);
 	line-height: var(--sl-line-height-headings);
