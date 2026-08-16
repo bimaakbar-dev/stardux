@@ -19,7 +19,6 @@
 	line-height: var(--sl-line-height-headings);
 }
 
-/* a11y fix for https://github.com/withastro/starlight/issues/487 */
 .sl-link-card a::before {
 	content: '';
 	position: absolute;
