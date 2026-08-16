@@ -1,3 +1,5 @@
+/* src/styles/LinkCard.css */
+
 .sl-link-card {
 	display: grid;
 	grid-template-columns: 1fr auto;
@@ -12,35 +14,35 @@
 	position: relative;
 }
 
-a {
+.sl-link-card a {
 	text-decoration: none;
 	line-height: var(--sl-line-height-headings);
 }
 
 /* a11y fix for https://github.com/withastro/starlight/issues/487 */
-a::before {
+.sl-link-card a::before {
 	content: '';
 	position: absolute;
 	inset: 0;
 }
 
-.stack {
+.sl-link-card .stack {
 	flex-direction: column;
 	gap: 0.5rem;
 }
 
-.title {
+.sl-link-card .title {
 	color: var(--sl-color-white);
 	font-weight: 600;
 	font-size: var(--sl-text-lg);
 }
 
-.description {
+.sl-link-card .description {
 	color: var(--sl-color-gray-3);
 	line-height: 1.5;
 }
 
-.icon {
+.sl-link-card .icon {
 	color: var(--sl-color-gray-3);
 }
 
