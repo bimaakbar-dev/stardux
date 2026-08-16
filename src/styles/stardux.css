@@ -1,4 +1,6 @@
 @import "./Card.css" layer(stardux);
+@import "./LinkCard.css" layer(stardux);
+
 @layer starlight, stardux;
 
 @layer stardux {
