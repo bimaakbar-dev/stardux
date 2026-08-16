@@ -3,7 +3,7 @@ title: "Markdown Elements"
 description: "Visual reference for all standard Markdown elements in Unloyd."
 order: 2
 draft: false
-lastUpdate: 2026-08-16T13:07:00Z
+lastUpdated: 2026-08-16T13:07:00Z
 ---
 
 Visual reference for how standard Markdown elements render in Unloyd theme.
