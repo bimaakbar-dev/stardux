@@ -11,9 +11,6 @@ export default defineConfig({
 				src: './src/assets/stradocs-logo.svg'
 			},
 			customCss: ['./src/styles/stardux.css',],
-			components: {
-				Pagination: './src/components/stardux/Pagination.astro',
-			},
 			social: [
 				{ 
 					icon: 'github', 
