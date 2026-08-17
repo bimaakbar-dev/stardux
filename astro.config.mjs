@@ -9,7 +9,7 @@ export default defineConfig({
 			title: 'Stradocs',
 			logo: {
 				src: './src/assets/stradocs-logo.svg'
-			}
+			},
 			customCss: ['./src/styles/stardux.css',],
 			social: [
 				{ 
