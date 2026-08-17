@@ -2,6 +2,7 @@
 @import "./LinkCard.css" layer(stardux);
 @import "./FileTree.css" layer(stardux);
 @import "./Aside.css" layer(stardux);
+@import "./Content.css" layer(stardux);
 
 @layer starlight, stardux;
 
