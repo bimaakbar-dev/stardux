@@ -37,7 +37,7 @@
 
 	.pagination-links .link-title {
 		color: var(--sl-color-white);
-		font-size: var(--sl-text-2xl);
+		font-size: var(--sl-text-lg);
 		line-height: var(--sl-line-height-headings);
 	}
 
