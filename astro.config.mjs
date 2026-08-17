@@ -6,10 +6,11 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'stardux',
-			customCss: [
-      './src/styles/stardux.css',
-    ],
+			title: 'Stradocs',
+			logo: {
+				src: './src/assets/stradocs-logo.svg'
+			}
+			customCss: ['./src/styles/stardux.css',],
 			social: [
 				{ 
 					icon: 'github', 
