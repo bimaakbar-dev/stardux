@@ -15,7 +15,7 @@
   /* Search, social, theme and language controls */
   .right-group,
   .social-icons {
-    gap: 0.75rem;
+    gap: var(--sl-nav-gap);
   }
 
   /* Separator */
