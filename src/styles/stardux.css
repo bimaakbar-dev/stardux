@@ -52,9 +52,11 @@
 
 		--sl-color-bg: #0a0a0a;
 		--sl-color-bg-nav: #0a0a0a;
-		--sl-color-bg-sidebar: #101010;
+		--sl-color-bg-sidebar: #0a0a0a;
 		--sl-color-bg-inline-code: #181818;
 		--sl-color-bg-accent: rgb(232 185 58 / 12%);
+	
+		--st-color-bg-sub: #101010;
 
 		--sl-color-hairline-light: #161616;
 		--sl-color-hairline: #262626;
@@ -152,6 +154,8 @@
 		--sl-color-bg-sidebar: #ffffff;
 		--sl-color-bg-inline-code: #f0f0f0;
 		--sl-color-bg-accent: rgb(107 112 117 / 9%);
+		
+		--st-color-bg-sub: #fafafa;
 
 		--sl-color-hairline-light: #efefef;
 		--sl-color-hairline: #e5e5e5;
