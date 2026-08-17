@@ -1,0 +1,41 @@
+---
+title: 'Aside'
+description: 'Stradocs themes for Aside components'
+lastUpdated: 2026-08-17
+draft: false
+sidebar:
+  label: Aside
+  badge: New
+  order: 4
+editUrl: true
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside>Some content in an aside.</Aside>
+
+<Aside type="caution">Some cautionary content.</Aside>
+
+<Aside type="tip">
+
+Other content is also supported in asides.
+
+```js
+// A code snippet, for example.
+```
+
+</Aside>
+
+<Aside type="danger">Do not give your password to anyone.</Aside>
+
+### Custom title
+
+<Aside type="caution" title="Watch out!">
+  A warning aside *with* a custom title.
+</Aside>
+
+### Custom Icons
+
+<Aside type="tip" icon="starlight">
+  A tip aside *with* a custom icon.
+</Aside>
