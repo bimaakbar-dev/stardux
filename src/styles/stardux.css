@@ -61,16 +61,47 @@
 
 		--sl-color-backdrop-overlay: rgb(10 10 10 / 92%);
 
-		--sl-shadow-sm:
-			0 1px 2px rgb(0 0 0 / 80%);
+		--sl-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
+		--sl-shadow-md: 0 6px 16px rgb(0 0 0 / 60%), 0 20px rgb(232 185 58 / 5%);
+		--sl-shadow-lg: 0 14px 28px rgb(0 0 0 / 68%), 0 0 32px rgb(232 185 58 / 7%);
+		
+		--sl-text-2xs: 0.75rem; /* 12px */
+		--sl-text-xs: 0.8125rem; /* 13px */
+		--sl-text-sm: 0.875rem; /* 14px */
+		--sl-text-base: 1rem; /* 16px */
+		--sl-text-lg: 1.125rem; /* 18px */
+		--sl-text-xl: 1.25rem; /* 20px */
+		--sl-text-2xl: 1.5rem; /* 24px */
+		--sl-text-3xl: 1.8125rem; /* 29px */
+		--sl-text-4xl: 2.1875rem; /* 35px */
+		--sl-text-5xl: 2.625rem; /* 42px */
+		--sl-text-6xl: 4rem; /* 64px */
 
-		--sl-shadow-md:
-			0 6px 16px rgb(0 0 0 / 60%),
-			0 0 20px rgb(232 185 58 / 5%);
-
-		--sl-shadow-lg:
-			0 14px 28px rgb(0 0 0 / 68%),
-			0 0 32px rgb(232 185 58 / 7%);
+		--sl-text-body: var(--sl-text-base);
+		--sl-text-body-sm: var(--sl-text-xs);
+		--sl-text-code: var(--sl-text-sm);
+		--sl-text-code-sm: var(--sl-text-xs);
+		--sl-text-h1: var(--sl-text-4xl);
+		--sl-text-h2: var(--sl-text-3xl);
+		--sl-text-h3: var(--sl-text-2xl);
+		--sl-text-h4: var(--sl-text-xl);
+		--sl-text-h5: var(--sl-text-lg);
+		
+		--sl-line-height: 1.75;
+		--sl-line-height-headings: 1.2;
+		
+		--sl-nav-height: 3.5rem;
+		--sl-nav-pad-x: 1rem;
+		--sl-nav-pad-y: 0.75rem;
+		--sl-mobile-toc-height: 3rem;
+		--sl-sidebar-width: 18.75rem;
+		--sl-sidebar-pad-x: 1rem;
+		--sl-content-width: 45rem;
+		--sl-content-pad-x: 1rem;
+		--sl-content-gap-y: 1rem;
+		--sl-main-pad: 0 0 3vh 0;
+		--sl-menu-button-size: 2rem;
+		--sl-nav-gap: 0.75rem;
 	}
 }
 
@@ -137,5 +168,23 @@
 		--sl-shadow-lg:
 			0 12px 20px rgb(0 0 0 / 9%),
 			0 3px 6px rgb(0 0 0 / 5%);
+	}
+	
+	@media (min-width: 50em) {
+		:root {
+			--sl-nav-height: 4rem;
+			--sl-nav-pad-x: 1.5rem;
+			--sl-text-h1: var(--sl-text-5xl);
+			--sl-text-h2: var(--sl-text-4xl);
+			--sl-text-h3: var(--sl-text-3xl);
+			--sl-text-h4: var(--sl-text-2xl);
+		}
+	}
+
+	@media (min-width: 72rem) {
+		:root {
+			--sl-content-pad-x: 1.5rem;
+			--sl-mobile-toc-height: 0rem;
+		}
 	}
 }
