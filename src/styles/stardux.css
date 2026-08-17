@@ -1,4 +1,5 @@
-@import "./stardux/Pagination.css" layer(stardux);
+@import "./stardux/Header.css";
+@import "./stardux/Pagination.css";
 
 @import "./Card.css" layer(stardux);
 @import "./LinkCard.css" layer(stardux);
