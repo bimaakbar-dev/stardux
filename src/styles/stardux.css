@@ -50,7 +50,7 @@
 		--sl-color-text-invert: #0a0a0a;
 
 		--sl-color-bg: #0a0a0a;
-		--sl-color-bg-nav: #101010;
+		--sl-color-bg-nav: #0a0a0a;
 		--sl-color-bg-sidebar: #101010;
 		--sl-color-bg-inline-code: #181818;
 		--sl-color-bg-accent: rgb(232 185 58 / 12%);
@@ -116,7 +116,7 @@
 		--sl-color-text-invert: #ffffff;
 
 		--sl-color-bg: #ffffff;
-		--sl-color-bg-nav: #fafafa;
+		--sl-color-bg-nav: #ffffff;
 		--sl-color-bg-sidebar: #ffffff;
 		--sl-color-bg-inline-code: #f0f0f0;
 		--sl-color-bg-accent: rgb(107 112 117 / 9%);
