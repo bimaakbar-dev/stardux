@@ -24,7 +24,7 @@
 .starlight-aside--note {
 	--sl-color-asides-text-accent: var(--sl-color-blue-high);
 	--sl-color-asides-border: var(--sl-color-blue);
-	--sl-color-asides-bg: #101010
+	--sl-color-asides-bg: #101010;
 	background-color: var(--sl-color-asides-bg);
 }
 
