@@ -9,15 +9,4 @@
 			white-space: nowrap;
 			min-width: 0;
 		}
-		span {
-			overflow: hidden;
-		}
-		img {
-			height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y));
-			width: auto;
-			max-width: 100%;
-			object-fit: contain;
-			object-position: 0 50%;
-		}
-	}
 }
