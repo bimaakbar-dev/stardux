@@ -2,13 +2,13 @@
 
 @layer stardux {
   /* Header */
-  .header {
+  /* .header {
     background: transparent;
-  }
+  } */
 
   /* Site title */
   .title-wrapper {
-    padding: 0.25rem;
+    /* padding: 0.25rem; */
     margin: -0.25rem;
   }
 
@@ -25,9 +25,9 @@
   }
 
   /* Desktop */
-  @media (min-width: 50rem) {
+  /* @media (min-width: 50rem) {
     .header {
       background: transparent;
     }
-  }
+  } */
 }
