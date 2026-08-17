@@ -8,7 +8,8 @@ export default defineConfig({
 		starlight({
 			title: 'Stradocs',
 			logo: {
-				src: './src/assets/stradocs-logo.svg'
+				light: './src/assets/stradocs-logo-light.svg',
+     dark: './src/assets/stradocs-logo.svg'
 			},
 			customCss: ['./src/styles/stardux.css',],
 			social: [
