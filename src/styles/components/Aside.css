@@ -51,8 +51,7 @@
 	.starlight-aside__icon {
 		font-size: 1.125em;
 		width: 1.125em;
-		height: 1.125em;
-        aspect-ratio: 1/1;
+		height: 1.125em;
         flex-shrink: 0;
 	}
 
