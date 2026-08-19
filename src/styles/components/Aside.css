@@ -56,7 +56,7 @@
 	}
 
 	.starlight-aside__title + .starlight-aside__content {
-		margin-top: 0.25rem;
+		/*margin-top: 0.25rem;*/
         font-size: var(--sl-text-sm);
 	}
 
