@@ -1,0 +1,28 @@
+@layer stradocs.core {
+	nav {
+		background-color: var(--bg);
+	}
+	.toggle {
+		border: 1px solid var(--border);
+			border-radius: var(--radius-md);
+		background-color: var(--bg-subtle);
+	}
+	details[open] .toggle {
+		color: var(--fg-strong);
+		border-color: var(--accent);
+	}
+	details .toggle:hover {
+		color: var(--accent);
+	}
+
+	.display-current {
+		color: var(--fg);
+	}
+	.dropdown {
+		background-color: var(--bg);
+		box-shadow: var(--shadow-md);
+	}
+	.isMobile a {
+		border-top: none;
+	}
+}

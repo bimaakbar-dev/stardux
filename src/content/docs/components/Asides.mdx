@@ -1,0 +1,59 @@
+---
+title: Aside
+description: A Custom components Aside in Stradocs site.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+To display secondary information alongside a page’s main content, use the `<Aside>` component.
+
+## Import
+
+```mdx
+import { Aside } from '@astrojs/starlight/components';
+```
+
+## Usage
+
+Display an aside (also known as “admonitions” or “callouts”) using the `<Aside>` component.
+
+An `<Aside>` can have an optional `type` attribute, which controls the aside’s color, icon, and default title.
+
+<Aside>Some content in an aside.</Aside>
+
+<Aside type="caution">Some cautionary content.</Aside>
+
+<Aside type="tip">
+
+Other content is also supported in asides.
+
+```js
+// A code snippet, for example.
+```
+
+</Aside>
+
+| test | test |
+| --- | --- |
+| test | test |
+| test | test |
+
+<Aside type="danger">Do not give your password to anyone. `BIMA`</Aside>
+
+Starlight also provides a custom syntax for rendering asides in Markdown and MDX as an alternative to the `<Aside>` component. See the “Authoring Content in Markdown” guide for details of the custom syntax.
+
+## Use custom titles
+
+Override the default aside `titles` by using the title attribute.
+
+<Aside type="caution" title="Watch out!">
+  A warning aside *with* a custom title.
+</Aside>
+
+## Use custom icons
+
+Override the default aside icons by using the icon attribute set to the name of one of Starlight’s built-in icons.
+
+<Aside type="tip" icon="starlight">
+  A tip aside *with* a custom icon.
+</Aside>

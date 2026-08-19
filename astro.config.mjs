@@ -2,16 +2,33 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+import astroExpressiveCode from 'astro-expressive-code'
+
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
+		astroExpressiveCode({
+			
+			styleOverrides: {
+				borderWidth: '1px',
+				borderRadius: 'var(--radius-md)',
+				borderColor: 'var(--border)',
+
+				codeBackground: 'var(--bg-subtle)',
+				frames: {
+					shadowColor: 'transparent',
+				},
+			},
+		}),
 		starlight({
 			title: 'Stradocs',
 			logo: {
-				light: './src/assets/stradocs-logo-light.svg',
-     dark: './src/assets/stradocs-logo.svg'
+				light: './src/assets/images/stradocs-logo-light.svg',
+				dark: './src/assets/images/stradocs-logo.svg'
 			},
-			customCss: ['./src/styles/stardux.css',],
+			customCss: [
+				'./src/styles/stradocs.css',
+			],
 			social: [
 				{ 
 					icon: 'github', 
@@ -20,26 +37,23 @@ export default defineConfig({
 				}
 			],
 			sidebar: [
-     {
-					label: 'Debug',
-					items: [
-						{ label: 'Tipography', slug: 'debug/tipography' },
-					],
-				},
 				{
 					label: 'Guides',
 					items: [
 						{ label: 'Example Guide', slug: 'guides/example' },
-						{ label: 'Example Guide', slug: 'guides/example' },
+					],
+				},
+				{
+					label: 'Writting',
+					items: [
+						{ label: 'Typography', slug: 'writting/typography' },
 					],
 				},
 				{
 					label: 'Components',
 					items: [
-						{ label: 'Cards', slug: 'components/cards-stardux' },
-						{ label: 'Link Cards', slug: 'components/linkcards-stardux' },
-						{ label: 'File Tree', slug: 'components/filetree-stardux' },
-						{ label: 'Aside', slug: 'components/aside-stardux' },
+						{ label: 'Asides', slug: 'components/asides' },
+						{ label: 'Cards', slug: 'components/cards' },
 					],
 				},
 				{
