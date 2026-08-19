@@ -43,7 +43,7 @@
 		align-items: center;
 		font-size: var(--sl-text-sm);
 		font-weight: 500;
-		line-height: var(--sl-line-height-headings);
+		line-height: var(--sl-line-height);
 		color: var(--sl-color-asides-text-accent);
         vertical-align: middle;
 	}
